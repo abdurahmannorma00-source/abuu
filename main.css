@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.layout {
+    width: min(984px, 92vw);
+    min-height: 672px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 60px 48px 112px;
+    color: black;
+    text-align: center;
+    background:
+        linear-gradient(120deg, rgba(184, 69, 35, .85), rgba(255, 207, 188, .75)),
+        url("https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=900&q=85")
+        center / cover;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 160px;
+    height: 160px;
+    opacity: .35;
+    background-image: radial-gradient(#fff 2px, transparent 2px);
+    background-size: 17px 17px;
+}
+
+.lamp {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 325px;
+    background: #17484c;
+    transform: translateX(-50%);
+}
+
+.lamp::after {
+    content: "";
+    position: absolute;
+    top: 170px;
+    left: 50%;
+    width: 390px;
+    height: 65px;
+    border-radius: 50% 50% 12px 12px;
+    background: linear-gradient(#e8e8e8 20%, #143f43 70%, #f4c928 78%, #1c3c40 88%);
+    transform: translateX(-50%);
+    box-shadow: 0 8px 8px rgba(0, 0, 0, .2);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero p {
+    margin: 0 auto 36px;
+    max-width: 410px;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+button {
+    border: 0;
+    border-radius: 30px;
+    padding: 15px 42px;
+    background: #fff;
+    color: #111;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.features {
+    position: relative;
+    padding: 102px 48px;
+    overflow: hidden;
+    color: #fff;
+    background:
+        linear-gradient(rgba(13, 91, 96, .9), rgba(32, 131, 139, .9)),
+        center / cover;
+}
+
+.features::after {
+    content: "D";
+    position: absolute;
+    right: -20px;
+    bottom: -80px;
+    color: rgba(255, 255, 255, .08);
+    font-size: 560px;
+    font-weight: bold;
+}
+
+.features h1,
+.feature-grid {
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    margin: 0 0 28px;
+    font-size: 43px;
+    line-height: 1.1;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 42px 42px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+ 
+    
